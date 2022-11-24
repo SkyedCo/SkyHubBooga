@@ -1,0 +1,372 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Holder = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Holder.Name = "Holder"
+Holder.Parent = ScreenGui
+Holder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Holder.Position = UDim2.new(0.375646174, 0, 0.338271618, 0)
+Holder.Size = UDim2.new(0, 433, 0, 261)
+Holder.Active = true
+Holder.Draggable = true
+
+UICorner.Parent = Holder
+
+TextLabel.Parent = Holder
+TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.Size = UDim2.new(0, 433, 0, 47)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = " "
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+UICorner_2.Parent = TextLabel
+
+Close.Name = "Close"
+Close.Parent = Holder
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.870669723, 0, 0, 0)
+Close.Size = UDim2.new(0, 56, 0, 50)
+Close.Font = Enum.Font.JosefinSans
+Close.Text = "x"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 40.000
+
+UICorner_3.Parent = Close
+
+TextLabel_2.Parent = Holder
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel_2.Size = UDim2.new(0, 377, 0, 47)
+TextLabel_2.Font = Enum.Font.JosefinSans
+TextLabel_2.Text = "\"Skyed\"s  Booga Booga Gui"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 23.000
+
+UICorner_4.Parent = TextLabel_2
+
+TextButton.Parent = Holder
+TextButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton.Position = UDim2.new(0, 0, 0.214559376, 0)
+TextButton.Size = UDim2.new(0, 433, 0, 56)
+TextButton.Font = Enum.Font.JosefinSans
+TextButton.Text = "\"Skyed\"s God Armor Set (Client Side)"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 15.000
+
+UICorner_5.Parent = TextButton
+
+TextButton_2.Parent = Holder
+TextButton_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton_2.Position = UDim2.new(0, 0, 0.455938667, 0)
+TextButton_2.Size = UDim2.new(0, 433, 0, 56)
+TextButton_2.Font = Enum.Font.JosefinSans
+TextButton_2.Text = "Old God TP"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 15.000
+
+UICorner_6.Parent = TextButton_2
+
+TextButton_3.Parent = Holder
+TextButton_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton_3.Position = UDim2.new(0, 0, 0.701149404, 0)
+TextButton_3.Size = UDim2.new(0, 433, 0, 56)
+TextButton_3.Font = Enum.Font.JosefinSans
+TextButton_3.Text = "Unlock FPS"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 15.000
+
+UICorner_7.Parent = TextButton_3
+
+-- Scripts:
+
+local function HCMOVK_fake_script() -- Close.Script 
+	local script = Instance.new('Script', Close)
+
+	script.Parent.MouseButton1Down:connect(function()
+		game:GetService("CoreGui"):WaitForChild("ScreenGui"):Destroy()
+	end) 
+end
+coroutine.wrap(HCMOVK_fake_script)()
+local function EEETH_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		-- Locals
+		local plr = game:GetService("Players").LocalPlayer.Name
+	
+	
+		game:GetService("Workspace")[plr]["God Legs Left Leg"].Handle.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Legs Right Leg"].Handle.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Legs Left Foot"].Handle.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Legs Right Foot"].Handle.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Legs Right Foot"].Part.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Halo"].Handle.BrickColor = BrickColor.new("Really black")
+		-- Chestplate
+	
+		for i,v in pairs(game:GetService("Workspace")[plr]["God Chestplate"]:GetChildren()) do
+			if v.Name == "Leaves" then
+				v.BrickColor = BrickColor.new("Really black")
+			end
+		end
+		game:GetService("Workspace")[plr]["God Chestplate"].Handle.BrickColor = BrickColor.new("Really black")
+	
+		-- Armor
+		game:GetService("Workspace")[plr]["God Left Shoulder"].Handle.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Right Shoulder"].Handle.BrickColor = BrickColor.new("Really black")
+		game:GetService("Workspace")[plr]["God Halo"].Handle.Transparency = (0)
+		
+		-- God Bag
+	--[[ _G.GodBag = true
+	if _G.GodBag == true then
+	    for i,v in pairs(game:GetService("Workspace")[plr]["God Bag"]:GetChildren()) do
+	    if v.Name == 'Part' or v.Name == 'Handle' then 
+	        v.BrickColor = BrickColor.new("Really red")
+	
+	end
+	end
+	end
+	--]]
+		-- Void Bag 
+	
+	
+		_G.VoidBag = true 
+		if _G.VoidBag == true then
+			for i,v in pairs(game:GetService("Workspace")[plr]["Void Bag"]:GetChildren()) do
+				if v.Name == 'Part' or v.Name == 'Handle' then 
+					v.BrickColor = BrickColor.new("Really red")
+				end
+			end
+		end
+		game:GetService("Workspace")[plr]["God Rock"].Part.BrickColor = BrickColor.new("Really black")
+	
+	end)
+	
+end
+coroutine.wrap(EEETH_fake_script)()
+local function HLKZJS_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Down:connect(function()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").TpBack.TopOfWhiteAntArea.Position)
+			game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	
+			wait(3)
+			--tp 1
+	
+	
+			local teleport_table = {
+				location1 = Vector3.new( -1034, -3, -603
+	
+				)
+	
+			}
+	
+			local tween_s = game:GetService('TweenService')
+			local tweeninfo = TweenInfo.new(10,Enum.EasingStyle.Linear)
+	
+			local lp = game.Players.LocalPlayer
+	
+			function bypass_teleport(v)
+				if lp.Character and 
+					lp.Character:FindFirstChild('HumanoidRootPart') then
+					local cf = CFrame.new(v)
+					local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+	
+	
+	
+	
+	
+					a:Play()
+					-- a.Completed:Wait()
+					-- print('Teleporting Done!')
+				end
+			end
+	
+			bypass_teleport(teleport_table.location1)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			-- end of tp 1
+			wait(11)
+	
+			local teleport_table = {
+				location1 = Vector3.new( -1079, -6, -681
+	
+				)
+	
+			}
+	
+			local tween_s = game:GetService('TweenService')
+			local tweeninfo = TweenInfo.new(7,Enum.EasingStyle.Linear)
+	
+			local lp = game.Players.LocalPlayer
+	
+			function bypass_teleport(v)
+				if lp.Character and 
+					lp.Character:FindFirstChild('HumanoidRootPart') then
+					local cf = CFrame.new(v)
+					local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+	
+	
+	
+	
+	
+					a:Play()
+					-- a.Completed:Wait()
+					-- print('Teleporting Done!')
+				end
+			end
+	
+			bypass_teleport(teleport_table.location1)
+	
+	
+	
+	
+	
+			-- tp 2
+	
+	
+	
+			wait(8)
+	
+	
+			local teleport_table = {
+				location1 = Vector3.new( -1099, -206, -687
+	
+				)
+	
+			}
+	
+			local tween_s = game:GetService('TweenService')
+			local tweeninfo = TweenInfo.new(10,Enum.EasingStyle.Linear)
+	
+			local lp = game.Players.LocalPlayer
+	
+			function bypass_teleport(v)
+				if lp.Character and 
+					lp.Character:FindFirstChild('HumanoidRootPart') then
+					local cf = CFrame.new(v)
+					local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+	
+	
+	
+	
+	
+					a:Play()
+					-- a.Completed:Wait()
+					-- print('Teleporting Done!')
+				end
+			end
+	
+			bypass_teleport(teleport_table.location1)
+	
+	
+	
+			-- tp 2
+	
+	
+	
+			wait(10)
+	
+	
+			local teleport_table = {
+				location1 = Vector3.new( -1092, -207, -563
+	
+				)
+	
+			}
+	
+			local tween_s = game:GetService('TweenService')
+			local tweeninfo = TweenInfo.new(10,Enum.EasingStyle.Linear)
+	
+			local lp = game.Players.LocalPlayer
+	
+			function bypass_teleport(v)
+				if lp.Character and 
+					lp.Character:FindFirstChild('HumanoidRootPart') then
+					local cf = CFrame.new(v)
+					local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+	
+	
+	
+	
+	
+					a:Play()
+					-- a.Completed:Wait()
+					-- print('Teleporting Done!')
+				end
+			end
+	
+			bypass_teleport(teleport_table.location1)
+	
+	
+	
+	
+	
+		end)
+	
+	
+	
+end
+coroutine.wrap(HLKZJS_fake_script)()
+local function PYGE_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	
+	script.Parent.MouseButton1Down:connect(function()
+		setfpscap(1000)
+	end)
+	
+end
+coroutine.wrap(PYGE_fake_script)()
+local function RSSEM_fake_script() -- Holder.LocalScript 
+	local script = Instance.new('LocalScript', Holder)
+
+		local frame = script.Parent -- path to the frame
+		local mouse = game:GetService('Players').LocalPlayer:GetMouse(); -- we need the mouse object, which also has the keyboard
+	
+		mouse.KeyDown:connect(function(key) -- whenever a key is pushed down
+			key = key:lower() -- i do this in all my key events, though i don't remember why
+			if key == 'q' then -- if key pressed is h
+				frame.Visible = not frame.Visible -- flip between visible/invisible
+			end
+		end)
+end
+coroutine.wrap(RSSEM_fake_script)()
